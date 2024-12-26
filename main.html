@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySync</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 10vh;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 80%;
+    }
+
+    .title {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .links {
+        height: 100%;
+        width: 45%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .contact {
+        height: 100%;
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title img {
+        height: 95%;
+        width: 60px;
+        border-radius: 50%;
+    }
+
+    .title h3 {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .title a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .links a {
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(6, 6, 153);
+    }
+
+    .contact button,
+    .btns button {
+        width: 120px;
+        height: 35px;
+        font-family: 'Roboto', sans-serif;
+        background-color: rgb(6, 6, 153);
+        border: none;
+    }
+
+    .contact button a,
+    .btns button a {
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 90vh;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .contentbody {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 80%;
+    }
+
+    .rightcontent {
+        height: 70%;
+        width: 35%;
+        border-radius: 8%;
+    }
+
+    .rightcontent img {
+        height: 100%;
+        width: 100%;
+        border-radius: 8%;
+    }
+
+    .leftcontent {
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .ptitle {
+        font-size: 40px;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+    }
+
+    .cardpage {
+        height: 100vh;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(241, 242, 244);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cardbox {
+        height: 100%;
+        width: 55%;
+    }
+
+    .introdiv {
+        height: 13%;
+        width: 100%;
+    }
+
+    .carddiv {
+        height: 82%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
+        gap: 6px;
+    }
+
+    .card {
+        height: 160px;
+        width: 330px;
+        border-radius: 2%;
+        color: white;
+        box-sizing: border-box;
+        padding: 10px;
+        cursor: pointer;
+        text-wrap: wrap;
+    }
+
+    .card img{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .innercard{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .testimonial {
+        height: 45vh;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .innertestimonial {
+        height: 100%;
+        width: 80%;
+        cursor: pointer;
+    }
+
+    .testimonialreviews {
+        height: 75%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .testcard {
+        height: 170px;
+        width: 310px;
+        border-radius: 5%;
+        display: flex;
+        padding: 8px;
+        cursor: pointer;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+    }
+
+    .testcard:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .person {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .uppertest {
+        height: 50%;
+        width: 100%;
+        text-wrap: wrap;
+    }
+
+    .person img {
+        height: 65px;
+        width: 75px;
+        border-radius: 50%;
+    }
+
+    .personinfo {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        
+    }
+    .newsletter{
+            height: 58vh;
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .rightnews{
+            height: 90%;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: rgb(241, 242, 244);
+        }
+        .newsletterimg{
+            height: 100%;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+        }
+        .newsletter img{
+            height: 90%;
+            width: 90%;
+        }
+        /* .titlenews{
+        }
+        .emailnews{
+        }
+        .lastnews{
+        } */
+        .emailnews{
+            display: flex;
+            gap: 10px;
+        }
+        .emailnews input{
+            height: 25px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .emailnews button{
+            height: 30px;
+            width: 60px;
+            background-color: rgb(6, 6, 153);
+            border: none;
+            color: white;
+        }
+        .innerbodyfooter a{
+        text-decoration: none;
+        color: grey;
+    }
+    .innerbodyfooter a:hover{
+        color:  rgb(6, 6, 153);
+    }
+    .imgfooter {
+        height: 45%;
+        width: 40px;
+        border-radius: 50%;
+    }
+    .oneline{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bodyfooter{  
+        margin: 0px;
+        padding: 0px;
+        height: 40vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .innerbodyfooter{
+        height: 80%;
+        width: 70%;
+        display: flex;
+    }
+    .footerright{
+        height: 100%;
+        width: 40%;
+        gap: 5px;
+    }
+    .products , .company , .support , .legals{
+        height: 100%;
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .footer{
+        text-align: center;
+        height: 20%;
+        width: 70%;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="title">
+                <img src="logo.png" alt="img">
+                <h3> <a href=""> StudySync </a> </h3>
+            </div>
+            <div class="links">
+                <a href="\main.html"> Home </a>
+                <a href="\"> Features </a>
+                <a href="\"> Pricing </a>
+                <a href="\"> Blogs </a>
+                <a href="\"> AboutUs </a>
+            </div>
+            <div class="contact">
+                <button>
+                    <a href="\">Contact Us</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="contentbody">
+            
+            <div class="leftcontent">
+                <span style="color: rgb(6, 6, 153);"> <b> Very Proud to introduce </b> </span>
+                <p class="ptitle"> <b>Seamless Learning for Brighter Futures</b> </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eius tempora nam, dolorem
+                    maxime explicabo placeat porro magni cumque similique illum doloremque veniam cum. Asperiores sint
+                    iusto quod consequuntur rem?porro magni cumque similique illum doloremque veniam cum. Asperiores
+                    sint
+                    iusto quod consequuntur rem?</p>
+                <div class="btns">
+                    <button><a href="\"> Start Now </a></button>
+                    <button style="background-color: black;"><a href="\"> Take Tour </a></button>
+                </div>
+            </div>
+            
+            <div class="rightcontent">
+                <img src="content.png" alt="img">
+            </div>
+        </div>
+    </div>
+    <div class="cardpage">
+        <div class="cardbox">
+            <div class="introdiv">
+                <p style="font-family: 'Roboto', sans-serif;"> <b> Our Competitive Advantage </b> </p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione provident ullam! </p>
+            </div>
+            <div class="carddiv">
+                <div class="card" style="background-color: #ff6f91;">
+                    <div class="innercard">
+                    <img src="handshake.png" alt="">
+                    <span> <b> Industry Partnership </b> </span>
+                    </div>
+                    <p>Lorem ipsum dolor, cidunt natus eos quidem quod eaque enim quaerat deserunt saepe quam delectus
+                        fugit sed. Iure, nesciunt.</p>
+                </div>
+                <div class="card"  style="background-color: #1abc9c;">
+                    <div class="innercard">
+                    <img src="afordability.png" alt="">
+                    <span> <b> Affordability </b> </span>
+                    </div>
+                    <p>Lorem ipsum dolor, cidunt natus eos quidem quod eaque enim quaerat deserunt saepe quam delectus
+                        fugit sed. Iure, nesciunt.</p>
+                </div>
+
+                <div class="card"  style="background-color: #fbcd01;">
+                    <div class="innercard">
+                    <img src="bulb.png" alt="">
+                    <span> <b> Personalized Learning </b> </span>
+                    </div>
+                    <p>Lorem ipsum dolor, cidunt natus eos quidem quod eaque enim quaerat deserunt saepe quam delectus
+                        fugit sed. Iure, nesciunt.</p>
+                </div>
+                <div class="card"  style="background-color: #4d9feb;">
+                    <div class="innercard">
+                    <img src="call.png" alt="">
+                    <span> <b> Responsive Support </b> </span>
+                    </div>
+                    <p>Lorem ipsum dolor, cidunt natus eos quidem quod eaque enim quaerat deserunt saepe quam delectus
+                        fugit sed. Iure, nesciunt.</p>
+                </div>
+                <div class="card"  style="background-color: #2ecc71">
+                    <div class="innercard">
+                    <img src="comp.png" alt="">
+                    <span> <b> Innovative Technology </b> </span>
+                    </div>
+                    <p>Lorem ipsum dolor, cidunt natus eos quidem quod eaque enim quaerat deserunt saepe quam delectus
+                        fugit sed. Iure, nesciunt.</p>
+                </div>
+                <div class="card"  style="background-color: #8e44ad;">
+                    <div class="innercard">
+                    <img src="stat.png" alt="">
+                    <span> <b> Analytics and Insight </b> </span>
+                    </div>
+                    <p> Lorem ipsum dolor, cidunt natus eos quidem quod eaque enim quaerat deserunt saepe quam delectus
+                        fugit sed. Iure, nesciunt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonial">
+        <div class="innertestimonial">
+            <h3> What Others Say About Us </h3>
+            <div class="testimonialreviews">
+                <div class="testcard">
+                    <div class="uppertest">
+                        <p>  Elit Adipisci, dolor assumenda ab consectetur aperiam veritatis ea
+                            assumenda ab magnam iure quasi. lore mlorem lorem Dicta sed voluptas consectetur.</p>
+                    </div>
+                    <div class="person">
+                        <img src="person3.png" alt="">
+                        <div class="personinfo">
+                            <p> <span style="color: rgb(6, 6, 153);"> Henry Peterson </span><br> Parent </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testcard">
+
+                    <div class="uppertest">
+                        <p>Lorem ipsum dolor sit amet assumenda ab consectetur consectetur adipisicing elit Adipisci, dolor aperiam veritatis ea
+                            Dicta sed voluptas consectetur.</p>
+                    </div>
+                    <div class="person">
+                        <img src="person1.png" alt="">
+                        <div class="personinfo">
+                            <p> <span style="color: rgb(6, 6, 153);"> Dr. David Clinton </span> <br> School
+                                Administrator </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testcard">
+                    <div class="uppertest">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Adipisci, dolor aperiam veritatis ea
+                            assumenda ab consectetur.</p>
+                    </div>
+                    <div class="person">
+                        <img src="person2.png" alt="">
+                        <div class="personinfo">
+                            <p> <span style="color: rgb(6, 6, 153);"> Methew Curik </span><br> 8th Grade English Teacher
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newsletter">
+        <div class="newsletterimg">
+        <img src="news.png" alt="img">
+        </div>
+        <div class="rightnews">
+            <div class="titlenews">
+                <h3 style="
+                font-family: 'Roboto', sans-serif;
+                color: rgb(6, 6, 153); font-size: 30px;"> Get The Latest Updates </h3>
+                <p> Sign Up for Our NewsLetter </p>
+            </div>
+            <div class="emailnews">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <button> Send </button>
+            </div>
+            <div class="lastnews">
+                <p>Sign up now and become a part, By subscribing, you agree to our <a href="" style="color: rgb(6, 6, 153); text-decoration: none;"> Terms and Conditions </a> and <a href="" style="color: rgb(6, 6, 153); text-decoration: none;"> Privacy Policy </a>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bodyfooter" style="background-color: rgb(241, 242, 244);">
+        <div class="innerbodyfooter">
+        <div class="footerright">
+            <div class="oneline">
+                <img src="logo.png" alt="img" class="imgfooter">
+            <h3> <a href=""> StudySync </a> </h3>
+            </div>
+            <p> Seamless Learning for Brighter Futures </p>
+            <a href="https://www.instagram.com" target="_blank" style="text-decoration: none; color: black;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; color: #0e76a8;">
+                <i class="fab fa-linkedin"></i> 
+            </a>
+        
+            <a href="https://twitter.com" target="_blank" style="text-decoration: none; color: #1DA1F2;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        
+            <a href="https://github.com" target="_blank" style="text-decoration: none; color: black;">
+                <i class="fab fa-github"></i> 
+            </a>
+        </div>
+        <div class="products">
+            <p> Products </p>
+            <a href=""> Overview </a>
+            <a href=""> Solutions </a>
+            <a href=""> Pricing </a>
+            <a href=""> Customers </a>
+        </div>
+        <div class="company">
+            <p> Company </p>
+            <a href=""> About </a>
+            <a href=""> Investors </a>
+            <a href=""> Jobs </a>
+            <a href=""> Press </a>
+            <a href=""> Blogs </a>
+        </div>
+        <div class="support">
+            <p> Support </p>
+            <a href=""> Contact </a>
+            <a href=""> documentaiton </a>
+            <a href=""> Chat </a>
+            <a href=""> FAQ </a>
+        </div>
+        <div class="legals">
+            <p> Legal </p>
+            <a href=""> Terms of service  </a>
+            <a href=""> Privacy Policy  </a>
+            <a href=""> Customize Settings  </a>
+        </div>
+    </div><div class="footer" >
+        <p> &copy; 2024 YourWebsite. All rights reserved.</p>
+    </div>
+    </div>
+</body></html>
