@@ -1,2 +1,2 @@
 # StudySync
-A frontend website
+A frontend StudySync website
