@@ -1,0 +1,2 @@
+# StudySync
+A frontend website
